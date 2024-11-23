@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private Transform healthPopUpObject;
 
     public int playerMaxHealth = 100;
 
@@ -25,10 +26,12 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         healthSystem.Damage(damageAmount);
+        HealthPopup.Create(healthPopUpObject, transform.position, -damageAmount);
     }
 
-    public void AddHealth(int addAmount)
+    public void AddHealth(int healAmount)
     {
-        healthSystem.Heal(addAmount);
+        healthSystem.Heal(healAmount);
+        HealthPopup.Create(healthPopUpObject, transform.position, healAmount);
     }
 }

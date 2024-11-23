@@ -487,6 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 487897074}
+  healthPopUpObject: {fileID: 4488055176100020683, guid: 1bee9498d2d08f74ba478b9f9acc4cca, type: 3}
   playerMaxHealth: 100
 --- !u!4 &561444943
 Transform:
