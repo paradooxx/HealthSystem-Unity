@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class HealthPopup : MonoBehaviour
 {
+    // set these values according to your game settings
     [SerializeField] private float textMoveSpeed = 4f;
     [SerializeField] private float disappearTime = 1f;
     [SerializeField] private float disappearSpeed = 1f;
@@ -10,12 +11,13 @@ public class HealthPopup : MonoBehaviour
     private TMP_Text popUpText;
     private Color textColor;
 
-    public static HealthPopup Create(Transform healthPopUpObject, Vector2 position, float damageAmount)
+    // call this function when you need to create healthPopup for damage or healing
+    public static HealthPopup Create(Transform healthPopUpObject, Vector2 position, float healthAmount, bool isDamage)
     {
         Transform healthPopupTransform = Instantiate(healthPopUpObject, position, Quaternion.identity);
 
         HealthPopup healthPopup = healthPopupTransform.GetComponent<HealthPopup>();
-        healthPopup.Setup(damageAmount);
+        healthPopup.Setup(healthAmount, isDamage);
 
         return healthPopup;
     }
@@ -25,23 +27,26 @@ public class HealthPopup : MonoBehaviour
         popUpText = GetComponent<TMP_Text>();
     }
 
-    private void OnEnable()
+    private void Setup(float damageAmount, bool isDamage)
     {
-        textColor = popUpText.color;
+        //isDamage is used to check whether the player is taking damage or healing
+        if(isDamage)
+        {
+            popUpText.text = "-" + damageAmount.ToString();
+            popUpText.color = Color.red;
+            textColor = popUpText.color;
+        }
+        else
+        {
+            popUpText.text = "+" + damageAmount.ToString();
+            popUpText.color = Color.green;
+            textColor = popUpText.color;
+        }
     }
-
-    private void Setup(float damageAmount)
-    {
-        popUpText.text = damageAmount.ToString();
-    }
-
-    // private void Start()
-    // {
-    //     popUpText.text = "-100".ToString();
-    // }
 
     private void Update()
     {
+        //you can add your own customization to the popup effects
         transform.position += new Vector3(0, textMoveSpeed) * Time.deltaTime;
 
         disappearTime -= Time.deltaTime;

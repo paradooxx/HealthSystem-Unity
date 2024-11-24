@@ -4,6 +4,8 @@ using UnityEngine;
 public class HealthBar : MonoBehaviour
 {
     private HealthSystem healthSystem;
+
+    //set the gameobject which acts as your healthbar whose size will increase/decrease
     [SerializeField] private GameObject healthBarLife;
 
     public void Setup(HealthSystem healthSystem)

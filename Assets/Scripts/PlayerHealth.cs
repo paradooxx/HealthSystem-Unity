@@ -6,7 +6,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private Transform healthPopUpObject;
 
-    public int playerMaxHealth = 100;
+    //set your own max health for player
+    //if you want other scripts to influence maxHealth remove { get; private set; } (not recommended)
+    public int playerMaxHealth { get; private set; } = 100;
 
     private HealthSystem healthSystem;
 
@@ -26,12 +28,13 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         healthSystem.Damage(damageAmount);
-        HealthPopup.Create(healthPopUpObject, transform.position, -damageAmount);
+        //since this function takes out health we set isDamage = true in below function
+        HealthPopup.Create(healthPopUpObject, transform.position, damageAmount, true);
     }
 
     public void AddHealth(int healAmount)
     {
         healthSystem.Heal(healAmount);
-        HealthPopup.Create(healthPopUpObject, transform.position, healAmount);
+        HealthPopup.Create(healthPopUpObject, transform.position, healAmount, false);
     }
 }

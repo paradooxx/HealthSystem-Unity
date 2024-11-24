@@ -123,29 +123,22 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &487897072 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 302314414490596983, guid: a5fad912a5c525040bdafde25edba057, type: 3}
-  m_PrefabInstance: {fileID: 1224309531310716860}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &487897073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5352803476564094724, guid: a5fad912a5c525040bdafde25edba057, type: 3}
   m_PrefabInstance: {fileID: 1224309531310716860}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &487897074
+--- !u!114 &487897074 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 508687815077555199, guid: a5fad912a5c525040bdafde25edba057, type: 3}
+  m_PrefabInstance: {fileID: 1224309531310716860}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487897072}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caba1053759fed14eabe99cef8cabb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarLife: {fileID: 856264056}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +491,7 @@ Transform:
   m_GameObject: {fileID: 561444941}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.42, y: -0.37, z: 0}
+  m_LocalPosition: {x: 0.1, y: -0.16, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -691,11 +684,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832201599}
   m_CullTransparentMesh: 1
---- !u!1 &856264056 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8985256205076293931, guid: a5fad912a5c525040bdafde25edba057, type: 3}
-  m_PrefabInstance: {fileID: 1224309531310716860}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1133898459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,14 +1134,6 @@ PrefabInstance:
       value: HealthBar
       objectReference: {fileID: 0}
     - target: {fileID: 5352803476564094724, guid: a5fad912a5c525040bdafde25edba057, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 5352803476564094724, guid: a5fad912a5c525040bdafde25edba057, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 5352803476564094724, guid: a5fad912a5c525040bdafde25edba057, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8666667
       objectReference: {fileID: 0}
@@ -1193,17 +1173,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5702795127929660938, guid: a5fad912a5c525040bdafde25edba057, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 302314414490596983, guid: a5fad912a5c525040bdafde25edba057, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 487897074}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5fad912a5c525040bdafde25edba057, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

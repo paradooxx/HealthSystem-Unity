@@ -2,6 +2,7 @@ using System;
 
 public class HealthSystem
 {
+    // health changed events
     public event EventHandler OnHealthChanged,
                               OnHealthZero;
 
